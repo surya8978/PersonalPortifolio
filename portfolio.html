@@ -1,0 +1,150 @@
+<html>
+<link rel="stylesheet" type="text/css" href="portfolio1.css">
+<div class="nav">
+  <button class="menu">MENU</button>
+  <div class="dropdown-content">
+  <a href="#welcome-section"><b>About</b></a>
+  <a href="#projects"><b>Work</b></a>
+  <a href="#loca"><b>Quotations</b></a>
+  <a href="#contact"><b>Contact</b></a>
+  </div>
+</div>
+<div  class="intro">
+  <h1><i><q>HII I AM SURYA</q>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<q>HII I AM SURYA </q>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<q>HII I AM SURYA </q></i></h1>
+  <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i><q>Welcome to my Website</q>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<q>Welcome to my Website</q>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<q>Welcome to my Website</q></i></h2>
+  <img  class="pro" src="surya4.jpg" alt="profile pic">
+</div>
+<div id="welcome-section" class="bio">
+<blockquote>
+ <p><b><q>Enthusiastic,Self-motivated university graduate with a BE in Computer Science Engineering. Created My Own Personal Portfolio Website and
+Some Webpages. Noted for skills in meeting deadlines, time management, accurate research and effective
+problem-solving. Motivative Active person</q></b></p>
+</div>
+</blockquote>
+<div id="projects" class="work">
+  <h3 class="work-header">These are some of web pages I had done</h3>
+  <a href="project.html" target="_blank" class="project project-tile">
+    <img class="project-pic" src="project1.png" alt="project">
+    <div class="project-title"><b>Tribute Page of Subhash Chandra Bose</b>
+</div>
+  </a>
+  <a href="survey.html" target="_blank" class="project project-tile">
+    <img class="project-pic" src="project2.png" alt="project">
+    <div class="project-title"><b>Survey Form</b></div>
+  </a>
+  <a href="product.html" target="_blank" class="project project-tile">
+    <img class="project-pic" src="project3.png" alt="project">
+    <div class="project-title"><b>Product landing page</b></div>
+  </a>
+  <a href="technical.html" target="_blank" class="project project-tile">
+    <img class="project-pic" src="project4.png" alt="project">
+    <div class="project-title"><b>Technical Data of PHP</b></div>
+  </a>
+  <a href="https://codepen.io/surya-rockzz/pen/vbXjVJ" target="_blank" class="project project-tile">
+    <img class="project-pic" src="website.png" alt="project">
+    <div class="project-title"><b>Persnol Portifolio</b></div>
+  </a>
+ 
+  <a href="resume.pdf" class="show-all" target="_blank">Check My Resume</a>
+</div> 
+<div id="loca" >
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <img src="Book title.jpg" alt = "Quotations" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 8</div>
+  <img src="Book page 1.jpg" alt = "Quotations" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <img src="Book page 2.jpg" alt = "Quotations" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 8</div>
+  <img src="Book page 3.jpg" alt = "Quotations" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 8</div>
+  <img src="Book page 4.jpg" alt = "Quotations" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 8</div>
+  <img src="Book page 5.jpg" alt = "Quotations" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">7 / 8</div>
+  <img src="Book page 6.jpg" alt = "Quotations" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 8</div>
+  <img src="Bookpage7.png" alt = "Quotations" style="width:100%">
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</div>  
+<div id="contact" class="contact">
+  <div class="header">
+    <h3>Reach Me On......</h3>
+    <p>any time Welcome</p>
+  </div>
+  <a href="https://www.facebook.com/profile.php?id=100006750375927" target="_blank" class="contact-details"><img class="contact-pic" src="facebook.png" alt="facebook"></a>
+  <a  href="https://www.linkedin.com/in/surya-narayana-35ba78168/" target="_blank" class="contact-details"><img class="contact-pic" src="linkedin.png" alt="linkedin"></a>
+  <a href="https://www.instagram.com/_this_is_surya/" class="contact-details"><img class="contact-pic" src="instagram.png" alt="instagram"></a>
+  <a href="https://twitter.com/surya8978" target="_blank" class="contact-details"><img class="contact-pic" src="twitter.png" alt="twitter"></a>
+  <a href="suryanarayana9100.posina@gmail.com" class="contact-details" ><img class="contact-pic" src="gmail.png" alt="gmail"></a> 
+</div>
+<footer>Visit Again.....
+  <p>&copy; Created by Suryanarayana</p>
+</footer>
+</html>
