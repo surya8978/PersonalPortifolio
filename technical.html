@@ -1,0 +1,209 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="technical.css">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One|Varela+Round|Viga" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <nav id="navbar">
+    <header>
+      <h1 id="navbar-title">PHP Programming</h1>
+      <ul id="nav-ul">
+        <hr class="li-hr"><li class="nav-li"><a class="nav-link" href="#introduction">Introduction</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#prerequisites">Prerequisites</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#hello-world">Hello World</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#variables">Variables</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#constants">Constants</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#data-types">Data Types</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#if-statement">If Statement</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#for-loop">For Loop</a></li><hr class="li-hr">
+        <li class="nav-li"><a class="nav-link" href="#while-loop">While Loop</a></li><hr class="li-hr">
+        <li id="last-li" class="nav-li"><a class="nav-link" href="#reference">Reference</a></li>
+      </ul>
+    </header>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section">
+      <header id="introduction">
+        <h1>Introduction</h1>
+        <p>PHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server.<p>
+        <h2>Common Uses</h2>
+        <ul>
+          <li>PHP performs system functions, i.e. from files on a system it can create, open, read, write, and close them</li>
+          <li>PHP can handle forms, i.e. gather data from files, save data to a file, through email you can send data, return data to the user</li>
+          <li>You add, delete, modify elements within your database through PHP</li>
+          <li>Access cookies variables and set cookies</li>
+          <li>Using PHP, you can restrict users to access some pages of your website</li>
+          <li>It can encrypt data</li>
+        </ul><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="prerequisites">
+        <h1>Prerequisites</h1>
+        <ul>
+          <li>Working knowledge of HTML</li>
+          <li>Familarity with basic system configuration</li>
+          <li>Computer and/or server to install PHP on</li>
+          <li>Passion for learning!!!</li>
+        </ul><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="hello-world">
+        <h1>Hello World</h1>
+        <p>To get a feel for PHP, first start with simple PHP scripts. Since "Hello, World!" is an essential example, first we will create a friendly little "Hello, World!" script.</p>
+        <p>As mentioned earlier, PHP is embedded in HTML. That means that in amongst your normal HTML you'll have PHP statements like this</p>
+<code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;?php echo "Hello, World!"; ?&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        <p>It will produce the following result:</p>
+<code>Hello, World!
+</code>
+        <p>If you examine the HTML output of the above example, you'll notice that the PHP code is not present in the file sent from the server to your Web browser. All of the PHP present in the Web page is processed and stripped from the page; the only thing returned to the client from the Web server is pure HTML output.</p><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="variables">
+        <h1>Variables</h1>
+        <h2>Creating (Declaring) PHP Variables</h2>
+        <p>In PHP, a variable starts with the $ sign, followed by the name of the variable</p>
+<code>&lt;?php
+  $txt = "Hello world!";
+  $x = 5;
+  $y = 10;
+?&gt;
+</code>
+        <p>After the execution of the statements above, the variable $txt will hold the value Hello world!, the variable $x will hold the value 5, and the variable $y will hold the value 10.5.</p>
+        <p><strong>Note:</strong> Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.</p><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="constants">
+        <h1>Constants</h1>
+        <p>Constants are like variables except that once they are defined they cannot be changed or undefined. A constant is an identifier (name) for a simple value. The value cannot be changed during the script. A valid constant name starts with a letter or underscore (no $ sign before the constant name).</p>
+        <p><strong>Note:</strong> Unlike variables, constants are automatically global across the entire script.</p>
+        <h2>Create a PHP Constant</h2>
+        <p>To create a constant, use the define() function.</p>
+        <p class="paragraph-box">define(<em>name, value, case-insensitive</em>);</p>
+        <ul>
+          <li><em>name:</em> Specifies the name of the constant</li>
+          <li><em>value:</em> Specifies the value of the constant</li>
+          <li><em>case-insensitive:</em> Specifies whether the constant name should be case-insensitive. Default is false</li>
+        </ul>
+<code>&lt;?php
+  define("GREETING", "Hello World!");
+  echo GREETING;
+?&gt;
+</code>
+        <p>Output:</p>
+<code>Hello World!
+</code><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="data-types">
+        <h1>Data Types</h1>
+        <h2>String</h2>
+        <p>A string is a sequence of characters, like "Hello world!".</p>
+        <p>A string can be any text inside quotes. You can use single or double quotes.</p>
+        <h2>Integer</h2>
+        <p>An integer data type is a non-decimal number.</p>
+        <p>Rules for integers:</p>
+        <ul>
+          <li>An integer must have at least one digit</li>
+          <li>An integer must not have a decimal point</li>
+          <li>An integer can be either positive or negative</li>
+          <li>Integers can be specified in three formats: decimal, hexadecimal, or octal</li>
+        </ul>
+        <h2>Float</h2>
+        <p>A float (floating point number) is a number with a decimal point or a number in exponential form.</p>
+        <h2>Boolean</h2>
+        <p>A Boolean represents two possible states: TRUE or FALSE.</p>
+        <p>Booleans are often used in conditional testing, which is outside the scope of this page.</p>
+        <h2>Array</h2>
+        <p>An array stores multiple values in one single variable.</p>
+<code>&lt;?php
+  $cars = array("Volvo", "BMW", "Toyota");
+&gt;?
+</code>
+        <p><strong>Note:</strong> There are other data types, but they're outside the scope of this page.</p><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="if-statement">
+        <h1>If Statement</h1>
+        <p>The if statement executes some code if one condition is true.</p>
+<p class="syntax-example">if (condition) {
+  code to be executed if condition is true;
+}</p>
+        <p>The example below will output "Have a good day!" if the current time (HOUR) is less than 20:</p>
+<code>&lt;?php
+  $t = date("H");
+  
+  if ($t < "20") {
+    echo "Have a good day!";
+  }
+?&gt;
+</code><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="for-loop">
+        <h1>For Loop</h1>
+        <p>PHP for loops execute a block of code a specified number of times.</p>
+        <p>The for loop is used when you know in advance how many times the script should run.</p>
+<p class="syntax-example">for (init counter; test counter; increment counter) {
+  code to be executed;
+}</p>
+        <h2>Parameters:</h2>
+        <ul>
+          <li>init counter: Initialize the loop counter value</li>
+          <li>test counter: Evaluated for each loop iteration. If it evaluates to TRUE, the loop continues. If it evaluates to FALSE, the loop ends.</li>
+          <li>increment counter: Increases the loop counter value</li>
+        </ul>
+        <p>The example below displays the numbers from 0 to 10:</p>
+<code>&lt;?php;
+  for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x &lt;br&gt;";
+  }
+?&gt;</code><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="while-loop">
+        <h1>While Loop</h1>
+        <p>The while loop executes a block of code as long as the specified condition is true.</p>
+<p class="syntax-example">while (condition is true) {
+  code to be executed;
+}</p>
+        <p>The example below first sets a variable $x to 1 ($x = 1). Then, the while loop will continue to run as long as $x is less than, or equal to 5 ($x &lt;= 5). $x will increase by 1 each time the loop runs ($x++):</p>
+<code>&lt;?php
+  $x = 1;
+  while($x <= 5) {
+    echo "The number is: $x &lt;br&gt;";
+    $x++;
+  }
+?&gt;</code><hr>
+      </header>
+    </section>
+    <section class="main-section">
+      <header id="reference">
+        <h1>References</h1>
+        <ul>
+          <li><a href="https://www.w3schools.com/php7">W3 Schools - PHP7</a></li>
+          <li><a href="https://www.tutorialspoint.com/php/php_introduction.htm">Tutorials Point</a></li>
+          <li><a href="http://php.net/manual/en/introduction.php">Official PHP Manual</a></li>
+        </ul>
+      </header>
+    </section>
+  </main>
+</body>
+</html>
+  
