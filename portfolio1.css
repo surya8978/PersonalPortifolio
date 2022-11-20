@@ -1,7 +1,7 @@
 html,
 body {
   font-family:Times New Roman;
-  background:url(back4.jpg);
+  background:url(images/back4.jpg);
   background-repeat:no-repeat;
   background-size:100% 100%;
   text-align:center;
@@ -97,7 +97,7 @@ font-size:25px;
 }
 .intro {
   top: 0;
-   background: url(background.jpg);
+   background: url(images/background.jpg);
   max-height: 45vh;
   padding-top: 20%;
   background-position: fill;
